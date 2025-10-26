@@ -7,6 +7,7 @@
         High,
         Middle,
         Low,
-        Lowest
+        Lowest,
+        Lossless
     }
 }

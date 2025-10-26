@@ -289,6 +289,9 @@ namespace VGAudio.Cli
 
                             switch (quality.ToUpper())
                             {
+                                case "LOSSLESS":
+                                    hcaQuality = CriHcaQuality.Lossless;
+                                    break;
                                 case "HIGHEST":
                                     hcaQuality = CriHcaQuality.Highest;
                                     break;
@@ -566,6 +569,7 @@ namespace VGAudio.Cli
 
             Console.WriteLine("\nHCA Options:");
             Console.WriteLine("      --hcaquality     The quality level to use for the HCA file");
+            Console.WriteLine("      --framesize  PCM frame size to use for HCA files");
             Console.WriteLine("      --bitrate        The bitrate in bits per second of the output HCA file");
             Console.WriteLine("                       --bitrate takes precedence over --hcaquality");
             Console.WriteLine("      --limit-bitrate  This flag sets a limit on how low the bitrate can go");

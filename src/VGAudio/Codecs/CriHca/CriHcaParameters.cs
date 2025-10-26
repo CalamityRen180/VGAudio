@@ -4,6 +4,8 @@
     {
         public CriHcaParameters() { }
         public CriHcaParameters(CodecParameters source) : base(source) { }
+
+        public int FrameSize { get; set; }
         public CriHcaQuality Quality { get; set; } = CriHcaQuality.High;
         public int Bitrate { get; set; }
         public bool LimitBitrate { get; set; }

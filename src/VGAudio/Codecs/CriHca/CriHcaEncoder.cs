@@ -311,7 +311,15 @@ namespace VGAudio.Codecs.CriHca
                     break;
             }
 
-            bitrate = bitrate != 0 ? bitrate : pcmBitrate / compressionRatio;
+            if (quality == CriHcaQuality.Lossless)
+            {
+                maxBitrate = pcmBitrate;
+                bitrate = pcmBitrate;
+            }
+            else
+            {
+                bitrate = bitrate != 0 ? bitrate : pcmBitrate / compressionRatio;
+            }
 
             if (limitBitrate)
             {
